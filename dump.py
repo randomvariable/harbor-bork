@@ -4,7 +4,7 @@
 from mitmproxy.addons import export
 from mitmproxy.io import FlowReader
 
-filename = 'proxy3.mitm'
+filename = 'direct-vpn.mitm'
 
 with open(filename, 'rb') as fp:
     reader = FlowReader(fp)
