@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pull-test
+  labels:
+    app: pull-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pull-test
+  template:
+    metadata:
+      labels:
+        app: pull-test
+    spec:
+      containers:
+      - name: pull-test
+        image: projects.registry.vmware.com/tanzu_observability/proxy:10.13
